@@ -38,6 +38,9 @@ declare global {
       ZITADEL_CLIENT_ID?: string;
       ZITADEL_CLIENT_SECRET?: string;
       ZITADEL_ISSUER?: string;
+
+      // Basic Auth
+      BASIC_AUTH_API_URL?: string;
     }
   }
 }
@@ -85,6 +88,9 @@ export const getAuthConfig = () => {
       ZITADEL_CLIENT_ID: z.string().optional(),
       ZITADEL_CLIENT_SECRET: z.string().optional(),
       ZITADEL_ISSUER: z.string().optional(),
+
+      // Basic Auth
+      BASIC_AUTH_API_URL: z.string().optional(),
     },
 
     runtimeEnv: {
@@ -122,6 +128,9 @@ export const getAuthConfig = () => {
       ZITADEL_CLIENT_ID: process.env.ZITADEL_CLIENT_ID,
       ZITADEL_CLIENT_SECRET: process.env.ZITADEL_CLIENT_SECRET,
       ZITADEL_ISSUER: process.env.ZITADEL_ISSUER,
+
+      // Basic Auth
+      BASIC_AUTH_API_URL: process.env.BASIC_AUTH_API_URL,
     },
   });
 };
