@@ -20,7 +20,7 @@ export interface LobeAgentConfig {
   fewShots?: FewShots;
   /**
    * 角色所使用的语言模型
-   * @default gpt-4-o
+   * @default gpt-4o
    */
   model: string;
   /**
